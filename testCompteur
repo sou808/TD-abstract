@@ -1,0 +1,21 @@
+package td;
+
+public class testCompteur {
+
+    public static void main(String[] args) {
+        final int MAX = 4; 
+        
+        compteurconcret c1 = new compteurconcret();  //manajmouch na3mlou instanciation direct lil classe abstract donc 3mlna sous classe compteurconcret ili fiha il méthode abstraite incrementer().//
+        compteurconcret c2 = new compteurconcret();
+
+        for (int i = 0; i < MAX; i++) {
+            c1.incrementer();
+            c2.incrementer();
+            System.out.println("c1 = " + c1.getCourant() + ", c2 = " + c2.getCourant());
+        }
+
+        c1.raz();
+        c2.raz();
+         System.out.println("c1 = " + c1.getCourant() + ", c2 = " + c2.getCourant());
+    }
+}
